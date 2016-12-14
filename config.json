@@ -1,0 +1,5 @@
+{        
+    "USERNAME":"admin",
+    "PASSWORD": "password",    
+    "SESSION_IDLE_SECONDS":60
+}

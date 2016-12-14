@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Rafraichir la page</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" class="btn btn-danger" 
+        data-href="{{ url_for('delete') }}" data-toggle="modal" data-target="#confirm-delete">Effacement des données</a>
+        
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"><strong>Effacement des données</strong></div>
+                <div class="modal-body">
+                    <p>Etes-vous certain de vouloir supprimer l'ensemble des données ?</p>                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                    <a class="btn btn-danger btn-ok">Confirmer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="display:block; height:100px; width:100px"></div>
+    
+</div>
+{% endblock %}
